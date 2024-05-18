@@ -1,5 +1,9 @@
+//Initial scores of user and computer
+let humanScore = 0;
+let computerScore = 0;
+
 //Computer makes a random choice between rock, paper, scissors
-let ComputerChoice = ("rock", "paper", "scissors");
+let computerChoice = ("rock", "paper", "scissors");
 
 function getComputerChoice() {
     
@@ -16,21 +20,21 @@ function getComputerChoice() {
     }
 }
 
-// //Computer returns choice
+//Computer returns choice
 console.log(getComputerChoice());
 
 //User inputs valid choice
-let HumanChoice = window.prompt("What is your Choice: rock, paper or scissors?");
+let humanChoice = window.prompt("What is your Choice: rock, paper or scissors?");
 
 function getHumanChoice() {
 
-    if (HumanChoice === "rock") {
+    if (humanChoice === "rock") {
         return "rock";
 
-    } if (HumanChoice === "paper") {
+    } if (humanChoice === "paper") {
         return "paper";
 
-    } if (HumanChoice === "scissors") {
+    } if (humanChoice === "scissors") {
         return "scissors";
 
     } else {
