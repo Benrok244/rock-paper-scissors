@@ -3,7 +3,6 @@ let humanScore = 0;
 let computerScore = 0;
 
 //Computer makes a random choice between rock, paper, scissors
-let computerChoice = ("rock", "paper", "scissors");
 
 function getComputerChoice() {
     
@@ -12,29 +11,26 @@ function getComputerChoice() {
     if (randomizeChoice === 0) {
         return "rock";
 
-    } if (randomizeChoice === 1) {
+    } else if (randomizeChoice === 1) {
         return "paper";
 
-    } if (randomizeChoice === 2) {
+    } else if (randomizeChoice === 2) {
         return "scissors";
     }
 }
 
-//Computer returns choice
-console.log(getComputerChoice());
-
 //User inputs valid choice
-let humanInput = window.prompt("What is your Choice: rock, paper or scissors?");
+let humanInput = prompt("What is your Choice: rock, paper or scissors?");
 
 function getHumanChoice() {
 
     if (humanInput === "rock") {
         return "rock";
 
-    } if (humanInput === "paper") {
+    } else if (humanInput === "paper") {
         return "paper";
 
-    } if (humanInput === "scissors") {
+    } else if (humanInput === "scissors") {
         return "scissors";
 
     } else {
@@ -43,7 +39,36 @@ function getHumanChoice() {
     
 }
 
-//Computer returns valid choice
-console.log(getHumanChoice());
+let computerChoice = getComputerChoice();
+let humanChoice = getHumanChoice();
+
+//Console returns human choice
+ console.log("You choose", humanChoice);
+
+//Console returns computer choice
+ console.log("Computer chooses", computerChoice);
 
 
+
+
+playRound();
+
+function playRound() {
+    
+    if ((humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")) {
+            console.log("You win!");
+            console.log("You: ", ++humanScore, "Computer: ", computerScore);
+
+    } else if ((humanChoice === "rock" && computerChoice === "paper") ||
+               (humanChoice === "paper" && computerChoice === "scissors") ||
+               (humanChoice === "scissors" && computerChoice === "rock")) {
+                   console.log("Computer wins!");
+                   console.log("You: ", humanScore, "Computer: ", ++computerScore);
+
+    } else if (humanChoice === computerChoice) {
+        console.log("It is a tie!");
+        console.log("You: ", humanScore, "Computer: ", computerScore);
+    }
+}
