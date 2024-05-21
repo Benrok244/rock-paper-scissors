@@ -24,17 +24,17 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 //User inputs valid choice
-let humanChoice = window.prompt("What is your Choice: rock, paper or scissors?");
+let humanInput = window.prompt("What is your Choice: rock, paper or scissors?");
 
 function getHumanChoice() {
 
-    if (humanChoice === "rock") {
+    if (humanInput === "rock") {
         return "rock";
 
-    } if (humanChoice === "paper") {
+    } if (humanInput === "paper") {
         return "paper";
 
-    } if (humanChoice === "scissors") {
+    } if (humanInput === "scissors") {
         return "scissors";
 
     } else {
@@ -45,3 +45,5 @@ function getHumanChoice() {
 
 //Computer returns valid choice
 console.log(getHumanChoice());
+
+
