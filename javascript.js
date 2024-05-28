@@ -19,11 +19,9 @@ function getComputerChoice() {
     }
 }
 
-//User inputs valid choice
-let humanInput = prompt("What is your Choice: rock, paper or scissors?");
-
+//User makes a valid choice
 function getHumanChoice() {
-
+    let humanInput = prompt("What is your Choice: rock, paper or scissors?");
     if (humanInput === "rock") {
         return "rock";
 
@@ -34,7 +32,7 @@ function getHumanChoice() {
         return "scissors";
 
     } else {
-        return "That is not a valid choice!";
+        return "something else, damn!";
     }
     
 }
@@ -48,11 +46,9 @@ let humanChoice = getHumanChoice();
 //Console returns computer choice
  console.log("Computer chooses", computerChoice);
 
-
-
-
 playRound();
 
+// Play a round of rock, paper, scissors
 function playRound() {
     
     if ((humanChoice === "rock" && computerChoice === "scissors") ||
@@ -72,3 +68,4 @@ function playRound() {
         console.log("You: ", humanScore, "Computer: ", computerScore);
     }
 }
+
