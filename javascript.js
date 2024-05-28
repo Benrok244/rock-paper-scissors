@@ -22,17 +22,11 @@ function getComputerChoice() {
 //User makes a valid choice
 function getHumanChoice() {
     let humanInput = prompt("What is your Choice: rock, paper or scissors?");
-    if (humanInput === "rock") {
-        return "rock";
-
-    } else if (humanInput === "paper") {
-        return "paper";
-
-    } else if (humanInput === "scissors") {
-        return "scissors";
-
+    if (humanInput === "rock" || humanInput === "paper" || humanInput === "scissors") {
+        return humanInput;
     } else {
-        return "something else, damn!";
+        console.log("Invalid choice! Please choose rock, paper or scissors!");
+        return getHumanChoice();
     }
     
 }
